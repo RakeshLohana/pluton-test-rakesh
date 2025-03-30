@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  
+
+
 jobs:
   build:
     name: Build Flutter APK
@@ -37,7 +41,7 @@ jobs:
         with:
           files: build/app/outputs/flutter-apk/app-release.apk
           tag_name: v1.0.${{ github.run_number }}
-          release_name: Release v1.0.${{ github.run_number }}
+          name: Release v1.0.${{ github.run_number }}
           body: "New Flutter release built from GitHub Actions."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
