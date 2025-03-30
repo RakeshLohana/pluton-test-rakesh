@@ -19,7 +19,7 @@ class SignInScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue.shade200,
         centerTitle: true,
-          title: Text("Sign-In Screen")),
+          title: Text("Sign-In Screen workflow")),
       body: Obx(()=> Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
